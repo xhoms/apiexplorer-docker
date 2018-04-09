@@ -1,0 +1,14 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker-compose build
+  - docker-compose up -d
+
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: master
