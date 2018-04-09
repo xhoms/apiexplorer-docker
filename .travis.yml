@@ -5,6 +5,9 @@ services:
 
 language: generic
 
+before_install:
+  - docker-compose build
+
 deploy:
   provider: script
   script: bash docker_push.sh
