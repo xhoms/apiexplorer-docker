@@ -4,7 +4,7 @@ services:
  gunicorn:
    restart: always
    build: ./gunicorn
-   image: tidr/apiexplorer
+   image: tidr/apiexplorer/gunicorn:v1
    volumes:
      - ./gunicorn:/opt/apiexplorer
    command: python3.6 run.py
@@ -12,6 +12,7 @@ services:
  nginx:
    restart: always
    build: ./nginx
+   image: tidr/apiexplorer/nginx:v1
    ports:
      - "443:443"
    volumes_from:
