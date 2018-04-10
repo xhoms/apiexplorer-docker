@@ -1,22 +1,26 @@
-version: '2'
- 
-services:
- gunicorn:
-   restart: always
-   build: ./gunicorn
-   image: tidr/apiexplorer:gunicorn
-   volumes:
-     - ./gunicorn:/opt/apiexplorer
-   container_name: gunicorn
-   command: python3.6 run.py
+version: '3'
 
- nginx:
-   restart: always
-   build: ./nginx
-   image: tidr/apiexplorer:nginx
-   ports:
-     - "443:443"
-   volumes_from:
-     - gunicorn
-   depends_on:
-     - gunicorn
+services:
+
+  nginx:
+    restart: always
+    build: ./nginx
+    image: tidr/apiexplorer_nginx
+    ports:
+      - "443:443"
+      - "80:80"
+    volumes:
+      - ./gunicorn:/opt/apiexplorer
+    depends_on:
+      - apiexplorer
+
+  apiexplorer:
+    restart: always
+    build: ./gunicorn
+    image: tidr/apiexplorer
+    volumes:
+      - ./gunicorn:/opt/apiexplorer
+    command: python3.6 run.py
+
+volumes:
+  gunicorn:
