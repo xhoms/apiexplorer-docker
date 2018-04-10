@@ -8,6 +8,10 @@ language: generic
 before_install:
   - docker-compose build
 
+script:
+  - docker ps | grep -qw apiexplorer
+  - docker ps | grep -qw apiexplorer_nginx
+
 deploy:
   provider: script
   script: bash docker_push.sh
