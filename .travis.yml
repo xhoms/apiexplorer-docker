@@ -7,10 +7,16 @@ language: generic
 
 before_install:
   - docker-compose build
+  - docker-compose up -d
+
+before_script:
+  - pip install requests
+  - pip install pytest
 
 script:
   - docker ps | grep -qw apiexplorer
   - docker ps | grep -qw apiexplorer_nginx
+  - pytest
 
 deploy:
   provider: script
