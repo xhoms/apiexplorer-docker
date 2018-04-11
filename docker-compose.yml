@@ -1,4 +1,4 @@
-version: '3'
+version: "3.4"
 
 services:
 
@@ -9,8 +9,6 @@ services:
     ports:
       - "443:443"
       - "80:80"
-    volumes:
-      - ./gunicorn:/opt/apiexplorer
     depends_on:
       - apiexplorer
 
@@ -19,8 +17,15 @@ services:
     build: ./gunicorn
     image: tidr/apiexplorer
     volumes:
-      - ./gunicorn:/opt/apiexplorer
-    command: python3.6 run.py
+      - type: volume
+        source: gunicorn
+        target: /opt/apiexplorer
+        volume:
+          nocopy: true
+      - type: bind
+        source: ./
+        target: /opt/apiexplorer/app/db
+    command: python3.6 run.py -p
 
 volumes:
   gunicorn:
