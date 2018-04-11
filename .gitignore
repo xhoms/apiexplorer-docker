@@ -66,6 +66,8 @@ target/
 *.p12
 .DS_Store
 travis_pypi_setup.py
+app.json
+security.db
 
 # IDE stuff
 .idea/*
