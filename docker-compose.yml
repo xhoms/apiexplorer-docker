@@ -17,14 +17,10 @@ services:
     build: ./gunicorn
     image: tidr/apiexplorer
     volumes:
-      - type: volume
-        source: gunicorn
-        target: /opt/apiexplorer
-        volume:
-          nocopy: true
+      - ./gunicorn:/opt/apiexplorer
       - type: bind
-        source: ./
-        target: /opt/apiexplorer/app/db
+        source: ./db
+        target: /opt/apiexplorerdb/db
     command: python3.6 run.py -p
 
 volumes:
