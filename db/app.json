@@ -1,1 +1,1 @@
-{"_default": {}, "activation": {}, "settings": {}}
+{"_default": {}, "activation": {}, "settings": {"1": {"_id": 1, "auth_base_url": "https://identity.paloaltonetworks.com/as/authorization.oauth2", "token_url": "https://api.paloaltonetworks.com/api/oauth2/RequestToken", "revoke_token_url": "https://api.paloaltonetworks.com/api/oauth2/RevokeToken", "apigw_url": "https://apigw-stg4.us.paloaltonetworks.com", "vendor": "panw"}}, "oauth": {}}
