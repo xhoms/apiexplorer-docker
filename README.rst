@@ -15,7 +15,7 @@ Dockerized sample application for the Palo Alto Networks Application Framework.
 Features
 --------
 
-- Docker composition layered with API Explorer and NGiNX containers
+- Docker composition layered with API Explorer and NGiNX containers.
 
 CI/CD
 -----
