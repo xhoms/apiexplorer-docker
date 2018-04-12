@@ -16,7 +16,7 @@ before_script:
 script:
   - docker ps | grep -qw apiexplorer
   - docker ps | grep -qw apiexplorer_nginx
-  - pytest
+  - pytest -v
 
 deploy:
   provider: script
