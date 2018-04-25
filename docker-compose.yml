@@ -6,6 +6,9 @@ services:
     restart: always
     build: ./nginx
     image: tidr/apiexplorer_nginx
+    volumes:
+    - nginx-www:/usr/share/nginx:rw
+    - certs:/etc/ssl/certs:rw
     ports:
       - "443:443"
       - "80:80"
@@ -26,3 +29,5 @@ services:
 
 volumes:
   db:
+  certs:
+  nginx-www:
