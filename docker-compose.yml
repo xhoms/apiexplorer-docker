@@ -5,7 +5,6 @@ services:
   nginx:
     restart: always
     build: ./nginx
-    image: tidr/apiexplorer_nginx
     volumes:
     - nginx-www:/usr/share/nginx:rw
     - certs:/etc/ssl/certs:rw
