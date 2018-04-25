@@ -21,19 +21,19 @@ using `pip`. Ensure you are running version 1.17.0-rc1 or greater.
 
 * Compose file version: 3.4
 
-Build:
+Build::
 
     $ docker-compose build
 
-Run:
+Run::
 
     $ docker-compose up
 
-Daemon Mode:
+Daemon Mode::
 
     $ docker-compose up -d
 
-Scale:
+Scale::
 
     $ docker-compose up -d --scale apiexplorer=4
 
