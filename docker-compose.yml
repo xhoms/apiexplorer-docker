@@ -5,7 +5,7 @@ services:
   nginx:
     restart: always
     build: ./nginx
-    image: nginx:alpine
+    image: nginx:stable
     volumes:
     - nginx-www:/usr/share/nginx:rw
     - certs:/etc/ssl/certs:rw
