@@ -5,7 +5,7 @@ services:
   nginx:
     restart: always
     build: ./nginx
-    image: nginx:stable-alpine
+    image: nginx:alpine
     volumes:
     - nginx-www:/usr/share/nginx:rw
     - certs:/etc/ssl/certs:rw
@@ -32,7 +32,7 @@ services:
     image: v2tec/watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval=60 --cleanup --debug
+    command: --interval=60 --cleanup
 
 volumes:
   db:
