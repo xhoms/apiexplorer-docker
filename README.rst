@@ -40,6 +40,10 @@ Scale::
     or (if already running in daemon mode)
 
     $ docker-compose scale apiexplorer=4
+    
+Logs::
+
+    $ docker-compose logs -f
 
 Features
 --------
@@ -66,11 +70,10 @@ Contributors
 .. |travis| image:: https://img.shields.io/travis/PaloAltoNetworks/apiexplorer-docker.svg
         :target: https://travis-ci.org/PaloAltoNetworks/apiexplorer-docker
         
-
-.. |pulls| image:: https://img.shields.io/docker/pulls/tidr/apiexplorer.svg   :alt: Docker Stars
+.. |pulls| image:: https://img.shields.io/docker/pulls/tidr/apiexplorer.svg
         :target: https://hub.docker.com/r/tidr/apiexplorer
 
-.. |stars| image:: https://img.shields.io/docker/stars/tidr/apiexplorer.svg   :alt: Docker Stars
+.. |stars| image:: https://img.shields.io/docker/stars/tidr/apiexplorer.svg
         :target: https://hub.docker.com/r/tidr/apiexplorer
 
 
