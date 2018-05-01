@@ -8,7 +8,7 @@ Dockerized sample application for the Palo Alto Networks Application Framework.
 
 -----
 
-|travis|
+|travis| |pulls| |stars|
 
 -----
 
@@ -65,6 +65,14 @@ Contributors
 
 .. |travis| image:: https://img.shields.io/travis/PaloAltoNetworks/apiexplorer-docker.svg
         :target: https://travis-ci.org/PaloAltoNetworks/apiexplorer-docker
+        
+
+.. |pulls| image:: https://img.shields.io/docker/pulls/tidr/apiexplorer.svg   :alt: Docker Stars
+        :target: https://hub.docker.com/r/tidr/apiexplorer
+
+.. |stars| image:: https://img.shields.io/docker/stars/tidr/apiexplorer.svg   :alt: Docker Stars
+        :target: https://hub.docker.com/r/tidr/apiexplorer
+
 
 
 .. _Docker: https://www.docker.com/what-docker
