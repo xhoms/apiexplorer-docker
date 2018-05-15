@@ -18,6 +18,8 @@ services:
     restart: always
     build: ./gunicorn
     image: tidr/apiexplorer
+    environment:
+      - SECURITY_REGISTERABLE=${SECURITY_REGISTERABLE}
     volumes:
       - type: volume
         source: db
