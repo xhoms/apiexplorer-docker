@@ -21,6 +21,18 @@ using `pip`. Ensure you are running version 1.17.0-rc1 or greater.
 
 * Compose file version: 3.4
 
+Clone repo::
+
+    $ git clone https://github.com/PaloAltoNetworks/apiexplorer-docker.git
+
+Update apiexplorer submodule::
+
+    $ git submodule update --init --recursive
+    
+    or 
+    
+    $ git submodule foreach git pull origin master
+
 Build::
 
     $ docker-compose build
@@ -36,10 +48,6 @@ Daemon Mode::
 Scale::
 
     $ docker-compose up -d --scale apiexplorer=4
-
-    or (if already running in daemon mode)
-
-    $ docker-compose scale apiexplorer=4
     
 Logs::
 
@@ -48,18 +56,20 @@ Logs::
 Features
 --------
 
-- Docker composition layered with API Explorer and NGiNX containers.
-- Automatic DNS load-balancing when scaling.
+* Docker composition layered with API Explorer and NGiNX containers.
+* Automatic DNS load-balancing when scaling.
+* Includes Watchtower container for automatic build/update when new images are available
+* Used in CFT version of API Explorer
 
 CI/CD
 -----
 
-- Automatic `build`, `test` and `push` to docker hub.
+* Automatic `build`, `test` and `push` to docker hub.
 
 Status
 ------
 
-`API Explorer - Docker` is considered **alpha** at this time.
+`API Explorer - Docker` is considered **beta** at this time.
 
 Contributors
 ------------
